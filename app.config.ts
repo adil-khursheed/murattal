@@ -49,7 +49,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     package: getUniqueIdentifier(),
   },
   updates: {
-    url: "https://u.expo.dev/ba943f8c-c156-413d-9fff-22d74d03348c",
+    url: "https://u.expo.dev/45c4e84f-52b3-420b-9175-ee132494e8d2",
   },
   runtimeVersion: {
     policy: "appVersion",
@@ -133,7 +133,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: "ba943f8c-c156-413d-9fff-22d74d03348c",
+      projectId: "45c4e84f-52b3-420b-9175-ee132494e8d2",
     },
   },
 });
