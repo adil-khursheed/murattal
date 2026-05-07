@@ -1,11 +1,6 @@
 const { getDefaultConfig } = require("expo/metro-config");
-const { withNativeWind } = require("nativewind/metro");
-const {
-  wrapWithReanimatedMetroConfig,
-} = require("react-native-reanimated/metro-config");
+const { withUniwindConfig } = require("uniwind/metro");
 
 const config = getDefaultConfig(__dirname);
 
-module.exports = wrapWithReanimatedMetroConfig(
-  withNativeWind(config, { input: "./global.css" })
-);
+module.exports = withUniwindConfig(config, { cssEntryFile: "./global.css" });

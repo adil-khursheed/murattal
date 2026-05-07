@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'uniwind';
+
+@theme {
+  --font-noor-e-hidayat-regular: 'noorehidayat-Regular';
+  --font-noor-e-hira-regular: 'noorehira-Regular';
+  --font-noor-e-huda-regular: 'noorehuda-Regular';
+  --font-roboto-bold: 'Roboto-Bold';
+  --font-roboto-extra-bold: 'Roboto-ExtraBold';
+  --font-roboto-medium: 'Roboto-Medium';
+  --font-roboto-regular: 'Roboto-Regular';
+  --font-roboto-semibold: 'Roboto-SemiBold';
+  --font-uthman-tn: 'UthmanTn';
+}
