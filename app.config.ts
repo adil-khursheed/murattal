@@ -1,4 +1,4 @@
-import { ConfigContext, ExpoConfig } from "expo/config";
+import type { ConfigContext, ExpoConfig } from "expo/config";
 
 const IS_DEV = process.env.APP_VARIANT === "development";
 const IS_PREVIEW = process.env.APP_VARIANT === "preview";
@@ -37,7 +37,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   icon: "./assets/images/icon.png",
   scheme: "murattal",
   userInterfaceStyle: "automatic",
-  newArchEnabled: true,
   ios: {
     supportsTablet: true,
     bundleIdentifier: getUniqueIdentifier(),
@@ -47,7 +46,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       foregroundImage: "./assets/images/adaptive-icon.png",
       backgroundColor: "#000000",
     },
-    edgeToEdgeEnabled: true,
     package: getUniqueIdentifier(),
   },
   updates: {
@@ -65,6 +63,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     "expo-router",
     "expo-build-properties",
     "expo-background-task",
+    "expo-web-browser",
+    "expo-asset",
     [
       "expo-font",
       {
@@ -93,14 +93,14 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       "expo-updates",
       {
-        username: "al-quran",
+        username: "murattal",
       },
     ],
     [
       "expo-location",
       {
         locationAlwaysAndWhenInUsePermission:
-          "Allow Al-Quran to use your location.",
+          "Allow Murattal to use your location.",
       },
     ],
     [
@@ -112,13 +112,13 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       "expo-audio",
       {
-        microphonePermission: "Allow Al-Quran to access your microphone.",
+        microphonePermission: "Allow Murattal to access your microphone.",
       },
     ],
     [
       "expo-sensors",
       {
-        motionPermission: "Allow Al-Quran to access your device motion.",
+        motionPermission: "Allow Murattal to access your device motion.",
       },
     ],
     [
